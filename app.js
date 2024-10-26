@@ -1,4 +1,5 @@
 const express = require("express")
+const dotenv = require('dotenv').config();
 const UserRouter = require("./routers/user")
 const ItemRouter = require("./routers/item")
 const CartRouter = require("./routers/cart")
@@ -10,7 +11,7 @@ app.use(UserRouter);
 app.use(ItemRouter);
 app.use(CartRouter);
 
-const port=3000;
+const port=process.env.PORT;
 
 
 
